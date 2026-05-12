@@ -114,7 +114,7 @@ export default function GameCanvas() {
       style={{ width: "100vw", height: "100vh", display: "block" }}
     >
       {/* Background */}
-      <color attach="background" args={["#1a1a1a"]} />
+      <color attach="background" args={["#87CEEB"]} />
 
       {/* Lights */}
       <ambientLight intensity={0.4} />
@@ -123,18 +123,18 @@ export default function GameCanvas() {
       {/* Floor */}
       <mesh rotation={[-Math.PI / 2, 0, 0]}>
         <planeGeometry args={[ROOM.width, ROOM.depth]} />
-        <meshStandardMaterial color="#555" />
+        <meshStandardMaterial color="white" />
       </mesh>
 
       {/* Walls */}
       <mesh position={[0, ROOM.height / 2, -ROOM.depth / 2]}>
         <boxGeometry args={[ROOM.width, ROOM.height, 0.3]} />
-        <meshStandardMaterial color="#666" />
+        <meshStandardMaterial color="gray" />
       </mesh>
 
       <mesh position={[0, ROOM.height / 2, ROOM.depth / 2]}>
         <boxGeometry args={[ROOM.width, ROOM.height, 0.3]} />
-        <meshStandardMaterial color="#666" />
+        <meshStandardMaterial color="gray" />
       </mesh>
 
       <mesh position={[-ROOM.width / 2, ROOM.height / 2, 0]}>
